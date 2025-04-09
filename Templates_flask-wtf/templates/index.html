@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>{{ type_simulator }}</h2>
+    {% if type_simulator == 'Научные симуляторы' %}
+            <img src={{img_science}} alt="типа картинка">
+    {% else %}
+            <img src={{img_eng}} alt="типа картинка">
+    {% endif %}
+{% endblock %}
