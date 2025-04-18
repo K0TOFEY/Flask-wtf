@@ -16,7 +16,7 @@ def with_name(title):
 
 @app.route('/training/<prof>')
 def profession(prof):
-    if prof == 'инженер' or prof == 'строитель':
+    if ('инженер' in prof) or ('строитель' in prof):
         return render_template('index.html', img_eng=url_for('static', filename='img/eng.jpg'), type_simulator='Инженерные тренажёры')
     else:
         return render_template('index.html', img_science=url_for('static', filename='img/science.jpg'), type_simulator='Научные симуляторы')
