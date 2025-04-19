@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% set team = ['Ридли Скотт', 'Энди Уир', 'Марк Уотни', 'Венката Капур', 'Тедди Сандерс', 'Шон Бин'] %}
+<div>
+    {% for user in team %}
+    <p>{{ user }} - Каюта №{{ loop.index }} {% if loop.first %} - капитан корабля {% endif %}</p>
+    {% endfor %}
+</div>
+{% endblock %}
