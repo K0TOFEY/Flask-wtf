@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <img src="{{file}}"><h3><strong>Аварийный доступ</strong></h3>
+    <div class="input-group mb-3">
+        <label>id астронавта</label>
+        <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" name="id_astro">
+    </div>
+    <div class="input-group mb-3">
+        <label>Пароль астронавта</label>
+        <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" name="password_astro">
+    </div>
+    <div class="input-group mb-3">
+        <label>id капитана</label>
+        <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" name="id_cap">
+    </div>
+    <div class="input-group mb-3">
+        <label>Пароль капитана</label>
+        <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" name="password_cap">
+    </div>
+    <button type="submit" class="btn btn-primary">Отправить</button>
+{% endblock %}
