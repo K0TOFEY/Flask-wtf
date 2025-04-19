@@ -16,10 +16,12 @@ def with_name(title):
 
 @app.route('/training/<prof>')
 def profession(prof):
-    if ('инженер' in prof) or ('строитель' in prof):
-        return render_template('index.html', img_eng=url_for('static', filename='img/eng.jpg'), type_simulator='Инженерные тренажёры')
-    else:
-        return render_template('index.html', img_science=url_for('static', filename='img/science.jpg'), type_simulator='Научные симуляторы')
+    img_name = 'science.jpg'
+    simu_name = 'Научные симуляторы'
+    if ('инженер' in prof.lower()) or ('строитель' in prof.lower()):
+        img_name = 'eng.jpg'
+        simu_name = 'Инженерные тренажеры'
+    return render_template('index.html', img=url_for('static', filename=f'img/{img_name}'), type_simulator=simu_name)
 
 
 if __name__ == '__main__':
