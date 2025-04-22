@@ -12,3 +12,10 @@ form.login_form {
     border-radius: 5px;
     padding: 10px;
 }
+
+.mission-emblem {
+    background: url('../img/MARS-2-7.png') left center no-repeat;
+    background-size: 40px 40px;
+    padding-left: 50px;
+    min-height: 45px;
+    margin: 20px 0;

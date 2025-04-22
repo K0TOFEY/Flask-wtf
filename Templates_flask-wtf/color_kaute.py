@@ -39,6 +39,27 @@ def login():
         return 'ok'
 
 
+@app.route('/table')
+def show_table():
+    gender = request.args.get('gender', 'male').lower()
+    age = int(request.args.get('age', 20))
+
+    if age < 21:
+        image = 'small_ino.png'
+        if gender == 'male':
+            color = '#00FFFF'
+        else:
+            color = '#EE82EE'
+    else:
+        image = 'big_ino.png'
+        if gender == 'male':
+            color = '#0000FF'
+        else:
+            color = '#FF00FF'
+
+    return render_template('color_kaute.html', color=color, image=image, title="Оформление каюты")
+
+
 @app.route('/astronaut_selection', methods=['POST', 'GET'])
 def astronaut_selection():
     global ans
@@ -187,3 +208,7 @@ def auto_answer():
 
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
+
+
+
+
